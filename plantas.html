@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidado de Plantas y Árboles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' a tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Filtro oscuro para mejorar legibilidad */
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 20px;
+            display: inline-block;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+
+        /* Estilo para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-image: url('modal-fondo.jpg'); /* Imagen de fondo para el modal */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            height: 80%;
+            max-height: 500px;
+            border-radius: 10px;
+            text-align: left;
+            overflow-y: auto;
+            color: white;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cuidado de Plantas y Árboles en Casa</h1>
+    <p>Selecciona un tema para obtener más información.</p>
+    
+    <ul>
+        <li><a href="#" onclick="openModal('modal1')">Riego adecuado</a></li>
+        <li><a href="#" onclick="openModal('modal2')">Iluminación óptima</a></li>
+        <li><a href="#" onclick="openModal('modal3')">Tipos de tierra</a></li>
+        <li><a href="#" onclick="openModal('modal4')">Poda y mantenimiento</a></li>
+        <li><a href="#" onclick="openModal('modal5')">Protección contra plagas</a></li>
+    </ul>
+</div>
+
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Riego adecuado</h2>
+        <p>El riego es uno de los factores más importantes para el cuidado de las plantas. No todas las plantas requieren la misma cantidad de agua. Un error común es regarlas en exceso, lo que puede provocar que las raíces se pudran.</p>
+        <p>Consejos de riego:</p>
+        <ul>
+            <li>Conoce la planta: Investiga cuánta agua necesita tu planta. Las suculentas, por ejemplo, requieren poca agua, mientras que los helechos necesitan más humedad.</li>
+            <li>Riego profundo: En lugar de regar superficialmente, asegúrate de que el agua penetre profundamente en el suelo.</li>
+            <li>Frecuencia: Evita regar a diario a menos que sea absolutamente necesario. Deja que el suelo se seque ligeramente entre riegos.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Iluminación óptima</h2>
+        <p>La cantidad de luz que reciben tus plantas es crucial para su salud. La mayoría de las plantas de interior necesitan luz indirecta, pero algunas, como los cactus, prefieren luz directa.</p>
+        <p>Consejos sobre iluminación:</p>
+        <ul>
+            <li>Coloca las plantas de luz indirecta cerca de ventanas orientadas al norte o este.</li>
+            <li>Las plantas de luz directa deben estar cerca de ventanas orientadas al sur o al oeste.</li>
+            <li>Si no tienes suficiente luz natural, considera el uso de luces artificiales de cultivo.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Tipos de tierra</h2>
+        <p>La tierra que uses para tus plantas debe ser adecuada para su especie. Usar la tierra incorrecta puede llevar a problemas como el mal drenaje o la falta de nutrientes.</p>
+        <p>Consejos sobre tierra:</p>
+        <ul>
+            <li>Mezcla para suculentas: Usa tierra arenosa y bien drenada.</li>
+            <li>Tierra para plantas de interior: Una mezcla rica en turba retiene humedad sin encharcarse.</li>
+            <li>Añade compost: El compost proporciona nutrientes y mejora la estructura del suelo.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Poda y mantenimiento</h2>
+        <p>La poda es fundamental para mantener las plantas en buen estado. Elimina las partes muertas o dañadas para estimular un crecimiento más vigoroso.</p>
+        <p>Consejos para podar:</p>
+        <ul>
+            <li>Poda regularmente para evitar que las plantas se vuelvan desordenadas o enfermas.</li>
+            <li>Usa herramientas limpias para evitar infecciones.</li>
+            <li>Elimina las flores marchitas para fomentar nuevas floraciones.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <h2>Protección contra plagas</h2>
+        <p>Las plagas pueden dañar gravemente tus plantas si no se controlan a tiempo. Utiliza métodos naturales o químicos según sea necesario para mantenerlas a raya.</p>
+        <p>Consejos para el control de plagas:</p>
+        <ul>
+            <li>Usa jabón insecticida o aceites naturales como el aceite de neem para repeler insectos.</li>
+            <li>Revisa las hojas de tus plantas regularmente en busca de signos de plagas.</li>
+            <li>Aisla las plantas afectadas para evitar la propagación de plagas a otras plantas sanas.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // Abre el modal correspondiente
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "flex"; // Cambiado a 'flex' para centrar el modal
+    }
+
+    // Cierra el modal correspondiente
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+</script>
+
+</body>
+</html>
